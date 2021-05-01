@@ -10,26 +10,24 @@
     
     <script>
 
-
-        var tree = '';
         var num = +(prompt('Введите высоту елочки!'));
-        // let num = 4;
+        // var num = 5;
+        var tree = '';
         if (num != num || num < 1) {
-            alert('Так не чесно :|');
+            alert('Упс =( попробуйте еще раз');
         } else {
-            for (let i = 0; i < num; i++) {
-                for (let j = num - 1; j > i; j--) {
-                    tree = tree + ' '; 
+            for (let i = num; i > 0; i--) {
+                for (let j = 0; j < i; j++) {
+                    tree = tree + ' ';
                 }
-                for (let k = 0; k <= (i * 2); k++) {
-                    tree = tree + '*'; 
+                tree = tree + '*';
+                for (let k = 1; k < num - i + 1; k++) {
+                    tree = tree + '**';
                 }
-                tree = tree + '\n'; 
+                tree = tree + '\n';
             }
         }
         console.log(tree);
-
-
 
     </script>
 
