@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+
+        var tree = '';
+        var num = +(prompt('Введите высоту елочки!'));
+        // let num = 4;
+        if (num != num || num < 1) {
+            alert('Так не чесно :|');
+        } else {
+            for (let i = 0; i < num; i++) {
+                for (let j = num - 1; j > i; j--) {
+                    tree = tree + ' '; 
+                }
+                for (let k = 0; k <= (i * 2); k++) {
+                    tree = tree + '*'; 
+                }
+                tree = tree + '\n'; 
+            }
+        }
+        console.log(tree);
+
+
+
+    </script>
+
+</body>
+</html>
